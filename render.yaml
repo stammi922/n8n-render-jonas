@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: n8n
+    name: n8n-crafthunt
     env: docker
     region: frankfurt # optional (defaults to oregon)
     plan: standard # optional (defaults to starter)
@@ -11,29 +11,29 @@ services:
     envVars:
       - key: PGHOST
         fromDatabase:
-          name: n8nDB
+          name: n8nDB-crafthunt
           property: host
       - key: PGDATABASE
         fromDatabase:
-          name: n8nDB
+          name: n8nDB-crafthunt
           property: database
       - key: PGPORT
         fromDatabase:
-          name: n8nDB
+          name: n8nDB-crafthunt
           property: port
       - key: PGUSER
         fromDatabase:
-          name: n8nDB
+          name: n8nDB-crafthunt
           property: user
       - key: PGPASSWORD
         fromDatabase:
-          name: n8nDB
+          name: n8nDB-crafthunt
           property: password
     disk:
-      name: n8nDisk
+      name: n8nDisk-crafthunt
       mountPath: /home/node/.n8n
       sizeGB: 10
 
 databases:
-  - name: n8nDB
+  - name: n8nDB-crafthunt
     plan: starter
