@@ -10,4 +10,4 @@ The .env file contain examples of lines that can be added manually on Environmen
 
 To change the webhook URL from localhost to your domain, for example, just add the var WEBHOOK_URL followed by the full URL.
 
-Version 0.224.1
+Version 1.51.2
