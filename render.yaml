@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: n8n-jonas
+    name: n8n-cito
     env: docker
     region: frankfurt # optional (defaults to oregon)
     plan: standard # optional (defaults to starter)
@@ -11,29 +11,29 @@ services:
     envVars:
       - key: PGHOST
         fromDatabase:
-          name: n8nDB-jonas
+          name: n8nDB-cito
           property: host
       - key: PGDATABASE
         fromDatabase:
-          name: n8nDB-jonas
+          name: n8nDB-cito
           property: database
       - key: PGPORT
         fromDatabase:
-          name: n8nDB-jonas
+          name: n8nDB-cito
           property: port
       - key: PGUSER
         fromDatabase:
-          name: n8nDB-jonas
+          name: n8nDB-cito
           property: user
       - key: PGPASSWORD
         fromDatabase:
-          name: n8nDB-jonas
+          name: n8nDB-cito
           property: password
     disk:
-      name: n8nDisk-jonas
+      name: n8nDisk-cito
       mountPath: /home/node/.n8n
       sizeGB: 10
 
 databases:
-  - name: n8nDB-jonas
-    plan: starter
+  - name: n8nDB-cito
+    plan: basic
